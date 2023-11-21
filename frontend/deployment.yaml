@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-app-deployment
+  namespace: frontend
+spec:
+  replicas: 3  # Number of desired replicas/pods
+  selector:
+    matchLabels:
+      app: front-app
+  template:
+    metadata:
+      labels:
+        app: front-app
+    spec:
+      containers:
+      - name: frontend
+        image: asia-south1-docker.pkg.dev/kartik69/frontend:latest  # Replace with your actual container image
+        ports:
+        - containerPort: 3000  # Replace with the port your application listens on

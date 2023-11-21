@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: back-app-deployment
+  namespace: backend
+spec:
+  replicas: 3  # Number of desired replicas/pods
+  selector:
+    matchLabels:
+      app: back-app
+  template:
+    metadata:
+      labels:
+        app: back-app
+    spec:
+      containers:
+      - name: backend
+        image: asia-south1-docker.pkg.dev/kartik69/backend:latest  # Replace with your actual container image
+        ports:
+        - containerPort: 3001  # Replace with the port your application listens on
