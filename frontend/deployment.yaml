@@ -20,7 +20,6 @@ spec:
         - containerPort: 3000  # Replace with the port your application listens on
 ---
 
-            ---
 # https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
 apiVersion: v1
 kind: Service
