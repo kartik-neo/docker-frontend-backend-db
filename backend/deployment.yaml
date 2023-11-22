@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: back-app-deployment
-  namespace: backend
+  namespace: frontend
 spec:
-  replicas: 3  # Number of desired replicas/pods
+  replicas: 2  # Number of desired replicas/pods
   selector:
     matchLabels:
       app: back-app
