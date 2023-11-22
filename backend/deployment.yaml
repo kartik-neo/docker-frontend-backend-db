@@ -28,7 +28,7 @@ metadata:
   namespace: frontend
 spec:
   selector:
-    app: front-app
+    app: back-app
   ports:
     - protocol: TCP
       port: 80
