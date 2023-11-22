@@ -18,3 +18,20 @@ spec:
         image: gcr.io/kartik69/frontend:latest  # Replace with your actual container image
         ports:
         - containerPort: 3000  # Replace with the port your application listens on
+---
+
+            ---
+# https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-load-balancer-service
+spec:
+  selector:
+    app: front-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer
+ 
