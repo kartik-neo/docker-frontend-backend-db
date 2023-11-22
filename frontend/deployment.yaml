@@ -4,7 +4,7 @@ metadata:
   name: front-app-deployment
   namespace: frontend
 spec:
-  replicas: 3  # Number of desired replicas/pods
+  replicas: 2  # Number of desired replicas/pods
   selector:
     matchLabels:
       app: front-app
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: asia-south1-docker.pkg.dev/kartik69/frontend:latest  # Replace with your actual container image
+        image: gcr.io/kartik69/frontend:latest  # Replace with your actual container image
         ports:
         - containerPort: 3000  # Replace with the port your application listens on
