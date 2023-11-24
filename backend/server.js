@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 const port = 3001;
 const routes = require("./routes");
 
-const username = "adminuser";
-const password = "password123";
+const username = "mongo";
+const password = "mongo";
 
 main().catch((err) => console.log(err));
 
@@ -13,7 +13,7 @@ async function main() {
   await mongoose.connect("mongodb://10.8.10.249:27017/todos", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
-    auth: { user: mongo, password: mongo },
+    auth: { user: username, password: password },
   });
 
   const app = express();
