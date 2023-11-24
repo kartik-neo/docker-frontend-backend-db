@@ -10,7 +10,7 @@ const password = "mongo";
 main().catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect("mongodb://10.8.10.249:27017/todos", {
+  await mongoose.connect("mongodb://34.142.201.166:27017/todos", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     auth: { user: username, password: password },
