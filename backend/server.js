@@ -10,10 +10,9 @@ const password = "test123";
 main().catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect("mongodb://34.142.201.166:27017/todos", {
+  await mongoose.connect("mongodb://root:test123@34.142.201.166:27017/todos", {
     useUnifiedTopology: true,
-    useNewUrlParser: true,
-    auth: { user: username, password: password },
+    useNewUrlParser: true
   });
 
   const app = express();
