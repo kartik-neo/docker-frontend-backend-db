@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 const port = 3001;
 const routes = require("./routes");
 
-const username = "mongo";
-const password = "mongo";
+const username = "root";
+const password = "test123";
 
 main().catch((err) => console.log(err));
 
